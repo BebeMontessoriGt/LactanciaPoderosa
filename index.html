@@ -23,11 +23,11 @@
       margin-bottom: 15px;
     }
     header {
-      display: none; /* Logo eliminado */
+      display: none;
     }
     .container {
-      width: 90%;
-      max-width: 1000px;
+      width: 95%;
+      max-width: 1200px;
       margin: auto;
       padding: 20px 0;
     }
@@ -70,9 +70,18 @@
       flex-wrap: wrap;
       gap: 30px;
       align-items: center;
+      justify-content: space-between;
+    }
+    .flex > div {
+      flex: 1 1 50%;
+      min-width: 300px;
     }
     .flex img {
+      flex: 1 1 50%;
       max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
       border-radius: 10px;
     }
     .benefits ul, .section ul {
@@ -92,7 +101,7 @@
     }
     .bonus-item {
       flex: 1 1 250px;
-      background-color: #f6e9f4; /* Fondo lila suave */
+      background-color: #f6e9f4;
       padding: 20px;
       border-radius: 10px;
       text-align: center;
@@ -107,7 +116,7 @@
       margin-top: 40px;
     }
     .guarantee img {
-      width: 300px; /* Más grande */
+      width: 300px;
       margin: 20px 0;
     }
     .testimonials {
@@ -143,6 +152,9 @@
       }
       .cta-btn {
         font-size: 1rem;
+      }
+      .flex > div, .flex img {
+        flex: 1 1 100%;
       }
     }
   </style>

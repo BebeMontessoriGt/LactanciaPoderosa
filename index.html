@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lactancia Poderosa - Duplica Tu Producción de Leche Materna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2b2c30;
+            background-color: #efeee7;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #4c0669;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #4c0669;
+            text-align: center;
+            margin: 50px 0 30px 0;
+            line-height: 1.2;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4c0669;
+            margin: 30px 0 20px 0;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #b6014e;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        .large-text {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .highlight {
+            color: #b6014e;
+            font-weight: 600;
+        }
+        
+        /* Sections */
+        .section {
+            background: white;
+            padding: 50px 40px;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #4c0669 0%, #efeee7 100%);
+            color: #efeee7;
+            padding: 80px 40px;
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .hero-section h1 {
+            color: #efeee7;
+            margin-bottom: 40px;
+        }
+        
+        .problem-section {
+            background: #4c0669;
+            color: #efeee7;
+        }
+        
+        .problem-section h2 {
+            color: #efeee7;
+        }
+        
+        .benefits-section {
+            background: white;
+            text-align: left;
+        }
+        
+        .bonuses-section {
+            background: linear-gradient(135deg, #fbda27 10%, #efeee7 100%);
+            padding: 60px 40px;
+        }
+        
+        .price-section {
+            background: #4c0669;
+            color: #efeee7;
+            padding: 60px 40px;
+        }
+        
+        .price-section h2 {
+            color: #fbda27;
+            margin-bottom: 40px;
+        }
+        
+        .guarantee-section {
+            background: #efeee7;
+            border: 2px solid #4c0669;
+        }
+        
+        /* Lists */
+        ul {
+            text-align: left;
+            margin: 30px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            padding-left: 10px;
+            position: relative;
+        }
+        
+        .pain-points li:before {
+            content: "❌ ";
+            color: #b6014e;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .benefits-list li:before {
+            content: "✅ ";
+            color: #4c0669;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .consequences li:before {
+            content: "⚠️ ";
+            margin-right: 10px;
+        }
+        
+        /* Buttons */
+        .cta-button {
+            background: linear-gradient(135deg, #fbda27 0%, #f4c430 100%);
+            color: #4c0669;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 20px rgba(251, 218, 39, 0.4);
+            border: none;
+            cursor: pointer;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(251, 218, 39, 0.6);
+            background: linear-gradient(135deg, #f4c430 0%, #fbda27 100%);
+        }
+        
+        .cta-large {
+            font-size: 1.3rem;
+            padding: 25px 50px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        /* Price styling */
+        .price-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #cccccc;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .current-price {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #fbda27;
+            margin: 20px 0;
+        }
+        
+        .urgency {
+            background: linear-gradient(135deg, #b6014e 0%, #d32f2f 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        /* Testimonials */
+        .testimonial {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 4px solid #b6014e;
+            font-style: italic;
+            text-align: left;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #4c0669;
+            margin-top: 20px;
+            font-style: normal;
+            text-align: right;
+        }
+        
+        /* Bonus items */
+        .bonus-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        
+        .bonus-title {
+            color: #4c0669;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .bonus-value {
+            color: #b6014e;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        
+        /* Warning boxes */
+        .warning {
+            background: linear-gradient(135deg, #b6014e 0%, #d32f2f 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            text-align: left;
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+        
+        .faq-question {
+            font-weight: 700;
+            color: #4c0669;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        /* Bundle summary */
+        .bundle-summary {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            border: 2px solid #4c0669;
+        }
+        
+        .bundle-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .bundle-item:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #4c0669;
+        }
+        
+        .bundle-value {
+            color: #b6014e;
+            font-weight: 600;
+        }
+        
+        /* Image containers */
+        .image-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .image-container img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .section {
+                padding: 30px 20px;
+                margin: 20px 0;
+            }
+            
+            .hero-section {
+                padding: 50px 20px;
+            }
+            
+            .current-price {
+                font-size: 3rem;
+            }
+            
+            .cta-button {
+                width: 100%;
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Animation */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Special elements */
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fbda27;
+            display: block;
+        }
+        
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="hero-section">
+            <h1>El Método Probado Que Ayudó a 847 Madres a Duplicar su Producción de Leche Materna en Menos de 10 Días</h1>
+            
+            <p class="large-text">¡Incluso Si Ya Probaste Todo!</p>
+            
+            <a href="https://pay.hotmart.com/K99629333P" class="cta-button cta-large pulse">
+                QUIERO AUMENTAR MI PRODUCCIÓN DE LECHE AHORA
+            </a>
+        </div>
+        
+        <!-- PROBLEM SECTION -->
+        <div class="section problem-section">
+            <h2>¿Tu bebé llora del hambre y en tu extractor solo hay gotas de leche materna?</h2>
+            
+            <p class="subtitle">¿Te sientes mala madre por tener que darle fórmula a tu bebé?</p>
+            
+            <p class="large-text">Miles de madres viven esta misma angustia cada día:</p>
+            
+            <ul class="pain-points">
+                <li>Se levantan con miedo de que su leche no sea suficiente</li>
+                <li>Lloran en silencio mientras ven a su bebé inconforme después de amamantar</li>
+                <li>Se sienten culpables al pensar en la fórmula como opción</li>
+                <li>Se comparan con otras mamás que muestran frascos llenos de leche en redes sociales</li>
+            </ul>
+        </div>
+        
+        <!-- AGITATION SECTION -->
+        <div class="warning">
+            ⚠️ PERO AQUÍ ESTÁ LA VERDAD QUE NADIE TE DICE...
+        </div>
+        
+        <div class="section">
+            <h3>Cada día que pasa con baja producción:</h3>
+            <ul class="consequences">
+                <li><strong>Tu bebé puede desarrollar problemas de crecimiento</strong> que afecten su desarrollo futuro</li>
+                <li><strong>Tu confianza como madre se erosiona más</strong> hasta llegar a un punto de no retorno</li>
+                <li><strong>El vínculo de lactancia se debilita permanentemente</strong> - después de los 4 meses es casi imposible recuperarlo</li>
+                <li><strong>Los costos de fórmula se acumulan</strong> ($200+ al mes = $2,400 al año)</li>
+                <li><strong>Tu familia te mira con preocupación silenciosa</strong> pero no sabe cómo ayudarte</li>
+            </ul>
+            
+            <p class="center-text" style="font-size: 1.3rem; color: #b6014e; font-weight: 700; margin-top: 30px;">
+                ¿Cuánto tiempo más vas a permitir que esto continúe?
+            </p>
+        </div>
+        
+        <!-- DREAM OUTCOME -->
+        <div class="section">
+            <h2>✨ Imagina por un momento...</h2>
+            <ul class="benefits-list">
+                <li><strong>Amamantar con tranquilidad</strong>, viendo tu extractor llenarse de leche cremosa y abundante</li>
+                <li><strong>Ver a tu bebé satisfecho y dormido</strong> después de cada toma, creciendo fuerte gracias a ti</li>
+                <li><strong>Confiar completamente en tu cuerpo</strong> y sentir orgullo cada vez que alguien pregunta cómo alimentas a tu bebé</li>
+                <li><strong>Volver al trabajo sin pánico</strong>, sabiendo que tienes suficiente leche almacenada</li>
+                <li><strong>Ser la mamá que otras admiran</strong> por su lactancia exitosa y sin complicaciones</li>
+            </ul>
+            
+            <p class="center-text" style="font-size: 1.4rem; color: #4c0669; font-weight: 700; margin-top: 40px;">
+                Eso es exactamente lo que vas a lograr con <em>Lactancia Poderosa</em>.
+            </p>
+        </div>
+        
+        <!-- PRODUCT INTRODUCTION -->
+        <div class="section">
+            <h2>🌟 ¿Qué es Lactancia Poderosa?</h2>
+            
+            <div class="image-container">
+                <img src="mockup-ebook-lactancia.png" alt="Ebook Lactancia Poderosa" />
+            </div>
+            
+            <p class="large-text">Es un sistema digital completo diseñado específicamente para madres profesionales y entregadas como tú, que desean darle lo mejor a su bebé pero enfrentan la frustración de una baja producción de leche.</p>
+            
+            <p class="center-text" style="font-size: 1.2rem; color: #b6014e; font-weight: 700; margin-top: 30px;">
+                Este método ha sido probado por <span class="stat-number">847</span> madres reales con resultados medibles y comprobados.
+            </p>
+        </div>
+        
+        <!-- BENEFITS SECTION -->
+        <div class="section benefits-section">
+            <h2>✅ Lo que descubrirás en Lactancia Poderosa:</h2>
+            <ul class="benefits-list">
+                <li><strong>El "Protocolo de las 72 horas"</strong> que reactiva tu producción incluso si llevas semanas viendo solo gotas</li>
+                <li><strong>Por qué el 89% de madres comete este error fatal con el extractor</strong> (y cómo corregirlo hoy mismo)</li>
+                <li><strong>La "Regla del 3-3-3"</strong> que usan secretamente las madres que producen más de 40 oz al día</li>
+                <li><strong>El alimento común que BLOQUEA tu producción</strong> (lo comes sin saberlo y está saboteando tu lactancia)</li>
+                <li><strong>Cómo saber si tu bebé recibe suficiente leche</strong> SIN pesar, medir ni volverse loca con números</li>
+                <li><strong>El método de las "6 ventanas doradas"</strong> para maximizar tu producción cada día</li>
+                <li><strong>Por qué tomar más agua NO aumenta tu leche</strong> (y qué hacer realmente)</li>
+                <li><strong>La técnica japonesa de 2 minutos</strong> que multiplica tu producción antes de cada extracción</li>
+                <li><strong>Cómo preparar tu cuerpo para una lactancia exitosa</strong> antes de volver al trabajo</li>
+                <li><strong>El protocolo exacto para mantener tu producción</strong> trabajando 8+ horas fuera de casa</li>
+            </ul>
+            
+            <div class="center-text">
+                <a href="https://pay.hotmart.com/K99629333P" class="cta-button">
+                    QUIERO AUMENTAR MI PRODUCCIÓN AHORA
+                </a>
+            </div>
+        </div>
+        
+        <!-- BONUSES SECTION -->
+        <div class="bonuses-section">
+            <h2>🎁 BONOS EXCLUSIVOS - GRATIS HOY</h2>
+            
+            <div class="bonus-item">
+                <div class="bonus-title">BONO #1: Meditación Guiada "Flujo Abundante"</div>
+                <p>Audio de 15 minutos diseñado para aumentar tu oxitocina y facilitar el flujo de leche. Ideal para usar antes de extraer o amamantar.</p>
+                <div class="bonus-value">VALOR: $27 USD - HOY GRATIS</div>
+            </div>
+            
+            <div class="bonus-item">
+                <div class="bonus-title">BONO #2: Mapa de Diagnóstico Rápido</div>
+                <p>Identifica en menos de 60 segundos qué está realmente afectando tu producción y el protocolo exacto para solucionarlo hoy mismo.</p>
+                <div class="bonus-value">VALOR: $25 USD - HOY GRATIS</div>
+            </div>
+            
+            <div class="bonus-item">
+                <div class="bonus-title">BONO #3: Guía Completa "Lactancia & Trabajo Profesional"</div>
+                <p>Estrategias paso a paso para mantener (e incluso aumentar) tu producción después de volver a la oficina. Incluye horarios, técnicas de almacenamiento y cómo hablar con tu jefe.</p>
+                <div class="bonus-value">VALOR: $15 USD - HOY GRATIS</div>
+            </div>
+        </div>
+        
+        <!-- TESTIMONIALS SECTION -->
+        <div class="section">
+            <h2>📈 Lo que dicen las madres transformadas</h2>
+            
+            <div class="testimonial">
+                <p>"En solo 5 días pasé de extraer 2 oz en total a 6 oz por sesión. Pensaba que tendría que dejar la lactancia al volver al trabajo, pero gracias a Lactancia Poderosa hoy produzco más leche de la que mi bebé necesita. ¡Me devolvió la confianza que había perdido!"</p>
+                <div class="testimonial-author">- Mariana López, Abogada, mamá de 2</div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"Después de 3 semanas de frustración y lágrimas, con el Protocolo de las 72 horas logré triplicar mi producción. Ahora extraigo 12 oz en la mañana y 8 oz en la tarde. Finalmente disfruto mis momentos de lactancia sin culpa ni ansiedad."</p>
+                <div class="testimonial-author">- Laura Pivaral, Ingeniera, mamá primeriza</div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"Tenía 6 semanas sintiéndome un fracaso como madre. Mi bebé lloraba después de comer y yo solo producía gotitas. En 8 días con este método pasé de 3 oz diarias a 22 oz. ¡Es increíble!"</p>
+                <div class="testimonial-author">- Carmen Rodríguez, Doctora, mamá de 1</div>
+            </div>
+        </div>
+        
+        <!-- GUARANTEE SECTION -->
+        <div class="section guarantee-section">
+            <h2>🔒 Tu Inversión Está Completamente Protegida</h2>
+            
+            <div class="image-container">
+                <img src="garantia-hotmart-7dias.png" alt="Garantía 100% Segura" style="max-width: 200px;" />
+            </div>
+            
+            <p class="large-text">Tu compra está respaldada por la <strong>Garantía Doble de Satisfacción de 14 días</strong>.</p>
+            
+            <p>Si sigues el método exacto durante 14 días y no duplicas tu producción de leche, no solo te devuelvo tu dinero completo... <strong>te regalo $20 USD adicionales por haber perdido tu tiempo</strong>.</p>
+            
+            <p style="font-weight: 700; color: #4c0669; font-size: 1.2rem; margin-top: 30px;">
+                Así de segura estoy de que este método va a transformar tu lactancia.
+            </p>
+        </div>
+        
+        <!-- BUNDLE SUMMARY -->
+        <div class="bundle-summary">
+            <h2>Un resumen de todo lo que vas a recibir hoy</h2>
+            
+            <div class="bundle-item">
+                <span>Sistema Completo "Lactancia Poderosa"</span>
+                <span class="bundle-value">$47 USD</span>
+            </div>
+            <div class="bundle-item">
+                <span>BONO #1: Meditación Guiada "Flujo Abundante"</span>
+                <span class="bundle-value">$27 USD</span>
+            </div>
+            <div class="bundle-item">
+                <span>BONO #2: Mapa de Diagnóstico Rápido</span>
+                <span class="bundle-value">$25 USD</span>
+            </div>
+            <div class="bundle-item">
+                <span>BONO #3: Guía "Lactancia & Trabajo Profesional"</span>
+                <span class="bundle-value">$15 USD</span>
+            </div>
+            <div class="bundle-item">
+                <span>Soporte 24/7 + Actualizaciones GRATIS</span>
+                <span class="bundle-value">$20 USD</span>
+            </div>
+            <div class="bundle-item">
+                <span><strong>VALOR TOTAL</strong></span>
+                <span class="bundle-value"><strong>$134 USD</strong></span>
+            </div>
+        </div>
+        
+        <!-- PRICE SECTION -->
+        <div class="price-section">
+            <h2>⏰ OFERTA ESPECIAL DE LANZAMIENTO</h2>
+            
+            <div class="image-container">
+                <img src="bundle-lactanciapoderosa.png" alt="Bundle Lactancia Poderosa" />
+            </div>
+            
+            <div class="price-container">
+                <div class="old-price">Valor total: $134 USD</div>
+                <div class="current-price">SOLO $9 USD</div>
+            </div>
+            
+            <div class="urgency">
+                🚨 ATENCIÓN: Solo para las primeras 100 madres esta semana<br>
+                🔥 Quedan 23 copias al precio de lanzamiento<br>
+                ⏰ En 72 horas exactas el precio sube a $47 USD<br>
+                📊 Ya se vendieron 77 copias esta semana
+            </div>
+            
+            <a href="https://pay.hotmart.com/K99629333P" class="cta-button cta-large pulse">
+                SÍ, QUIERO EL MÉTODO COMPLETO POR SOLO $9
+            </a>
+            
+            <p style="font-style: italic; margin: 30px 0; color: #cccccc; font-size: 0.9rem;">
+                HAZ CLIC PARA VER EL PRECIO EN TU MONEDA LOCAL<br>
+                <em>(ATENCIÓN: Precio especial por lanzamiento, pronto aumenta a $47 USD)</em>
+            </p>
+        </div>
+        
+        <!-- FAQ SECTION -->
+        <div class="section">
+            <h2>Preguntas frecuentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Para quién es este método?</div>
+                <div class="faq-answer">Para madres profesionales y entregadas que desean darle lo mejor a su bebé pero enfrentan la frustración de baja producción de leche materna, incluso si ya probaron otros métodos sin éxito.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Qué voy a descubrir exactamente?</div>
+                <div class="faq-answer">Descubrirás técnicas específicas y probadas para duplicar tu producción de leche en menos de 10 días, eliminando los errores comunes que sabotean la lactancia y aplicando el protocolo exacto usado por 847 madres exitosas.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cuál es el plazo de garantía?</div>
+                <div class="faq-answer">Tienes 14 días completos para probar el método. Si no duplicas tu producción siguiendo las instrucciones exactas, te devolvemos tu dinero + $20 USD adicionales.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo accedo al contenido?</div>
+                <div class="faq-answer">Recibirás el acceso inmediato en tu correo electrónico. Puedes ver el contenido en computadora, teléfono o tablet. También puedes acceder desde tu cuenta en Hotmart.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo realizo la compra?</div>
+                <div class="faq-answer">Haz clic en el botón "Comprar ahora", completa tus datos en el formulario de pago seguro de Hotmart y accede inmediatamente al sistema completo.</div>
+            </div>
+        </div>
+        
+        <!-- FINAL CTA -->
+        <div class="section">
+            <h2>Tu bebé merece la mejor alimentación...</h2>
+            <p class="large-text">Y tú mereces sentirte segura y orgullosa como madre.</p>
+            
+            <p style="font-style: italic; margin: 30px 0; color: #4c0669; font-size: 1.1rem;">
+                "Sé que a veces dar el primer paso da miedo... pero es la única forma de romper con lo que no está funcionando y abrirte a la lactancia exitosa que siempre soñaste."
+            </p>
+            
+            <a href="https://pay.hotmart.com/K99629333P" class="cta-button cta-large pulse">
+                QUIERO TRANSFORMAR MI LACTANCIA AHORA
+            </a>
+        </div>
+        
+        <!-- FOOTER -->
+        <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #ccc; color: #666; font-size: 0.9rem;">
+            <p>Copyright 2024 © Lactancia Poderosa<br>Todos los de

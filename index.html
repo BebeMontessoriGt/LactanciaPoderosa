@@ -35,7 +35,7 @@
         }
 
         h1 {
-            font-family: 'Anton', sans-serif;
+            font-family: 'Garet', sans-serif;
             font-size: 3em;
             color: #b6014e;
             margin-bottom: 20px;
@@ -99,7 +99,7 @@
         }
 
         .comparison-title {
-            font-family: 'Anton', sans-serif;
+            font-family: 'Garet', sans-serif;
             font-size: 1.5em;
             margin-bottom: 20px;
         }
@@ -121,7 +121,7 @@
         }
 
         .section-title {
-            font-family: 'Anton', sans-serif;
+            font-family: 'Garet', sans-serif;
             font-size: 2.5em;
             color: #b6014e;
             margin-bottom: 30px;
@@ -151,21 +151,34 @@
         }
 
         .bonus-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .bonus-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
         }
 
         .bonus-card {
-            background: rgba(255,255,255,0.1);
-            padding: 25px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
         .bonus-title {
-            font-family: 'Anton', sans-serif;
+            font-family: 'Garet', sans-serif;
             font-size: 1.3em;
             margin-bottom: 15px;
         }
@@ -196,7 +209,7 @@
         }
 
         .current-price {
-            font-family: 'Anton', sans-serif;
+            font-family: 'Garet', sans-serif;
             font-size: 4em;
             color: #b6014e;
             margin: 10px 0;
@@ -272,7 +285,7 @@
         }
 
         .faq-question {
-            font-family: 'Anton', sans-serif;
+            font-family: 'Garet', sans-serif;
             font-size: 1.2em;
             color: #b6014e;
             margin-bottom: 10px;
@@ -365,11 +378,16 @@
                     <li>🔸 Disfruta cada momento de lactancia</li>
                 </ul>
             </div>
-        </div>
+            <div style="text-align: center; margin: 30px 0;">
+    <img src="foto-madre-bebe-feliz.jpg" alt="Madre feliz amamantando" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+</div>
 
         <!-- What You'll Achieve -->
         <div class="benefits-section">
             <h2 class="section-title">🌟 ¿Qué es Lactancia Poderosa?</h2>
+            <div style="text-align: center;">
+    <img src="mockup-ebook-lactancia.png" alt="Ebook Lactancia Poderosa" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+</div>
             <p style="font-size: 1.2em; margin-bottom: 30px; color: #4c0669;">
                 Es un ebook digital diseñado para madres como tú: profesionales, entregadas, que desean darle lo mejor a su bebé, pero enfrentan la angustia de una baja producción de leche.
             </p>
@@ -402,19 +420,19 @@
                 🎁 Además, HOY recibes 3 BONOS exclusivos totalmente GRATIS
             </h2>
             <div class="bonus-grid">
-                <div class="bonus-card">
+                <div class="bonus-card"> <img src="bonus1-meditacion.png" alt="Meditación Guiada" style="width: 100px; height: 100px; border-radius: 10px; margin-bottom: 15px;">
                     <div class="bonus-title">BONO #1</div>
                     <h3 style="margin: 15px 0;">Meditación Guiada en PDF</h3>
                     <p>Para aumentar tu oxitocina y facilitar el flujo de leche.</p>
                     <div class="bonus-value">VALOR: $12 - ¡HOY GRATIS!</div>
                 </div>
-                <div class="bonus-card">
+                <div class="bonus-card"> <img src="bonus2-mapa-accion.png" alt="Mapa de Acción" style="width: 100px; height: 100px; border-radius: 10px; margin-bottom: 15px;">
                     <div class="bonus-title">BONO #2</div>
                     <h3 style="margin: 15px 0;">Mapa de Acción Rápida</h3>
                     <p>Identifica en segundos qué está afectando tu producción y cómo solucionarlo.</p>
                     <div class="bonus-value">VALOR: $8 - ¡HOY GRATIS!</div>
                 </div>
-                <div class="bonus-card">
+                <div class="bonus-card"> <img src="bonus3-guia-trabajo.png" alt="Guía Trabajo" style="width: 100px; height: 100px; border-radius: 10px; margin-bottom: 15px;">
                     <div class="bonus-title">BONO #3</div>
                     <h3 style="margin: 15px 0;">Guía Lactancia & Trabajo</h3>
                     <p>Estrategias prácticas para mantener tu producción incluso después de volver a la oficina.</p>
@@ -446,16 +464,17 @@
         <div class="pricing-section">
             <h2 style="font-family: 'Anton', sans-serif; font-size: 2em; color: #4c0669; margin-bottom: 20px;">
                 Un resumen de todo lo que vas a recibir hoy
-            </h2>
-            
-            <div style="text-align: left; max-width: 500px; margin: 30px auto; font-size: 1.1em;">
+            </h2> 
+            <div style="text-align: center; margin: 30px 0;">
+    <img src="bundle-lactanciapoderosa.png" alt="Bundle Lactancia Poderosa" style="max-width: 400px; width: 100%; height: auto;">
+</div>
+      <div style="text-align: left; max-width: 500px; margin: 30px auto; font-size: 1.1em;">
                 <div>📚 Acceso completo a "Lactancia Poderosa" ($27)</div>
                 <div>🎁 BONO #1: Meditación Guiada ($12)</div>
                 <div>🎁 BONO #2: Mapa de Acción Rápida ($8)</div>
                 <div>🎁 BONO #3: Guía Lactancia & Trabajo ($15)</div>
                 <div>🔒 Garantía de 7 días</div>
                 <div>⚡ Acceso inmediato</div>
-                <div>📱 Soporte incluido</div>
                 <hr style="margin: 20px 0; border: 1px solid #ddd;">
                 <div style="font-weight: 700; font-size: 1.2em;">Valor total: <span style="text-decoration: line-through; color: #999;">$62 USD</span></div>
             </div>
@@ -482,6 +501,10 @@
 
         <!-- Guarantee Section -->
         <div class="guarantee-section">
+            <div class="guarantee-section">
+    <div style="display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: center; text-align: left;">
+        <img src="garantia-hotmart-7dias.png" alt="Garantía 7 días" style="width: 120px; height: auto;">
+        <div>
             <h3 style="font-family: 'Anton', sans-serif; font-size: 2em; color: #4ecdc4; margin-bottom: 20px;">
                 🔒 Garantía de 7 Días - 100% Segura
             </h3>
@@ -493,6 +516,8 @@
                 Mi misión es apoyar a madres como tú a alimentar a sus bebés de manera plena y satisfactoria. Es tan sencillo como enviarme un correo en los próximos 7 días y recibirás el 100% de tu dinero de vuelta.
             </p>
         </div>
+    </div>
+</div>
 
         <!-- FAQ Section -->
         <div class="faq-section">

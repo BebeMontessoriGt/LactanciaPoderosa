@@ -68,8 +68,6 @@
             margin: 20px 0;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(182, 1, 78, 0.3);
-            width: 100%;
-            max-width: 600px;
         }
 
         .cta-button:hover {
@@ -114,42 +112,24 @@
             color: #4ecdc4;
         }
 
-        /* Imagen emocional */
-        .emotional-image {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .emotional-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        /* Sección Qué es Lactancia Poderosa con imagen del ebook */
-        .what-is-section {
+        .benefits-section {
             background: white;
             padding: 40px;
             border-radius: 20px;
             margin: 40px 0;
+            text-align: center;
+        }
+
+        .benefits-content {
             display: grid;
-            grid-template-columns: 1fr 300px;
+            grid-template-columns: 1fr 600px;
             gap: 40px;
             align-items: center;
+            margin: 30px 0;
         }
 
-        .what-is-content h2 {
-            font-family: 'Anton', sans-serif;
-            font-size: 2.5em;
-            color: #b6014e;
-            margin-bottom: 30px;
-        }
-
-        .what-is-content p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            color: #4c0669;
+        .benefits-text {
+            text-align: left;
         }
 
         .ebook-mockup {
@@ -160,15 +140,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .benefits-section {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            margin: 40px 0;
-            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .section-title {
@@ -192,7 +164,18 @@
             border-left: 4px solid #b6014e;
         }
 
-        /* Bonuses Section - Horizontal Layout */
+        .emotional-image {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .emotional-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
         .bonuses-section {
             background: linear-gradient(135deg, #b6014e, #9a0142);
             color: white;
@@ -202,41 +185,40 @@
             text-align: center;
         }
 
-        .bonus-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .bonus-item {
+            display: flex;
+            align-items: center;
             gap: 30px;
-            margin-top: 30px;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
         }
 
-        .bonus-card {
-            background: rgba(255,255,255,0.1);
-            padding: 25px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+        .bonus-item:nth-child(even) {
+            flex-direction: row-reverse;
         }
 
         .bonus-image {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            background: rgba(255,255,255,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            flex: 0 0 150px;
         }
 
         .bonus-image img {
-            width: 100%;
-            height: 100%;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .bonus-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .bonus-item:nth-child(even) .bonus-content {
+            text-align: right;
         }
 
         .bonus-title {
@@ -249,10 +231,25 @@
             font-weight: 700;
             font-size: 1.1em;
             color: #ffd700;
-            margin-top: auto;
+            margin-top: 10px;
         }
 
-        /* Bundle Section */
+        .testimonials-section {
+            margin: 40px 0;
+        }
+
+        .testimonials-image {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .testimonials-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
         .pricing-section {
             background: white;
             padding: 50px;
@@ -260,30 +257,16 @@
             text-align: center;
             margin: 40px 0;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            position: relative;
-        }
-
-        .bundle-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            margin: 30px 0;
         }
 
         .bundle-image {
-            flex-shrink: 0;
+            margin: 30px 0;
         }
 
         .bundle-image img {
-            width: 300px;
+            max-width: 100%;
             height: auto;
             border-radius: 15px;
-        }
-
-        .bundle-details {
-            text-align: left;
-            max-width: 500px;
         }
 
         .price-container {
@@ -309,7 +292,6 @@
             margin-top: 10px;
         }
 
-        /* Guarantee Section */
         .guarantee-section {
             background: #f0f8ff;
             padding: 40px;
@@ -322,22 +304,18 @@
             gap: 30px;
         }
 
-        .guarantee-badge {
-            flex-shrink: 0;
-        }
-
-        .guarantee-badge img {
-            width: 150px;
-            height: 150px;
-        }
-
         .guarantee-content {
             flex: 1;
-            text-align: left;
         }
 
-        .testimonials-section {
-            margin: 40px 0;
+        .guarantee-image {
+            flex: 0 0 150px;
+        }
+
+        .guarantee-image img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
         }
 
         .testimonial {
@@ -402,65 +380,9 @@
             line-height: 1.7;
         }
 
-        .emoji {
-            font-size: 1.2em;
-            margin-right: 8px;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #ffd700 0%, #ffd700 100%);
-            background-repeat: no-repeat;
-            background-size: 100% 30%;
-            background-position: 0 85%;
-            padding: 2px 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .bonus-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .bonus-card {
-                flex-direction: row;
-                text-align: left;
-                gap: 20px;
-            }
-            
-            .bonus-image {
-                width: 100px;
-                height: 100px;
-                margin-bottom: 0;
-                flex-shrink: 0;
-            }
-            
-            .bundle-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .what-is-section {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .ebook-mockup {
-                order: -1;
-            }
-            
-            .guarantee-section {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .guarantee-content {
-                text-align: center;
-            }
-        }
-
         @media (max-width: 768px) {
             .container {
+                max-width: 800px;
                 padding: 10px;
             }
 
@@ -472,32 +394,53 @@
                 grid-template-columns: 1fr;
             }
 
+            .benefits-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .benefits-text {
+                text-align: center;
+            }
+
+            .bonus-item {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .bonus-item:nth-child(even) .bonus-content {
+                text-align: center;
+            }
+
+            .guarantee-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
             .current-price {
                 font-size: 3em;
             }
 
-            .hero-section, .benefits-section, .pricing-section, .guarantee-section, .faq-section, .what-is-section {
+            .hero-section, .benefits-section, .pricing-section, .guarantee-section, .faq-section {
                 padding: 30px 20px;
             }
 
             .bonuses-section {
                 padding: 40px 20px;
             }
-            
-            .cta-button {
-                width: 100%;
-                padding: 15px 20px;
-                font-size: 1.1em;
-            }
-            
-            .bonus-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .bonus-image {
-                margin-bottom: 15px;
-            }
+        }
+
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffd700 0%, #ffd700 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 30%;
+            background-position: 0 85%;
+            padding: 2px 0;
         }
     </style>
 </head>
@@ -513,15 +456,15 @@
                 <strong>¿Te sientes mala madre por tener que darle fórmula a tu bebé?</strong><br><br>
                 Miles de madres viven esta misma angustia cada día: se levantan con miedo de que su leche no sea suficiente, lloran en silencio mientras ven a su bebé inconforme después de amamantar, y se sienten culpables al pensar en la fórmula como opción.
             </div>
-            <a href="https://pay.hotmart.com/K99629333P?checkoutMode=10" class="cta-button">
+            <a href="https://pay.hotmart.com/K99629333P" class="cta-button">
                 Quiero aumentar mi producción de leche ahora
             </a>
             <div class="price-details">💳 Compra segura • 📱 Acceso inmediato • 🛡️ Garantía 7 días</div>
         </div>
 
-        <!-- Imagen emocional después de la agitación -->
+        <!-- Emotional Image -->
         <div class="emotional-image">
-            <img src="foto-madre-bebe-feliz.jpg" alt="Madre feliz amamantando a su bebé" loading="lazy">
+            <img src="foto-madre-bebe-feliz.jpg" alt="Madre feliz amamantando a su bebé">
         </div>
 
         <!-- Before/After Comparison -->
@@ -550,87 +493,86 @@
             </div>
         </div>
 
-        <!-- What is Lactancia Poderosa con mockup del ebook -->
-        <div class="what-is-section">
-            <div class="what-is-content">
-                <h2>🌟 ¿Qué es Lactancia Poderosa?</h2>
-                <p>
-                    Es un ebook digital diseñado para madres como tú: profesionales, entregadas, que desean darle lo mejor a su bebé, pero enfrentan la angustia de una baja producción de leche.
-                </p>
-                <div class="benefits-grid" style="text-align: left;">
-                    <div class="benefit-item">
-                        <strong>✨ Aumentar tu producción</strong><br>
-                        De forma natural en pocos días
-                    </div>
-                    <div class="benefit-item">
-                        <strong>✨ Reconectar con tu confianza</strong><br>
-                        Sentirte orgullosa de ser madre
-                    </div>
-                    <div class="benefit-item">
-                        <strong>✨ Disfrutar la lactancia</strong><br>
-                        Sin culpas ni dudas
-                    </div>
-                    <div class="benefit-item">
-                        <strong>✨ Mantener tu lactancia</strong><br>
-                        Aunque trabajes fuera de casa
+        <!-- What You'll Achieve -->
+        <div class="benefits-section">
+            <h2 class="section-title"> ¿Qué es Lactancia Poderosa?</h2>
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <p style="font-size: 1.2em; margin-bottom: 30px; color: #4c0669;">
+                        Es un ebook digital diseñado para madres como tú: profesionales, entregadas, que desean darle lo mejor a su bebé, pero enfrentan la angustia de una baja producción de leche.
+                    </p>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <strong>✨ Aumentar tu producción</strong><br>
+                            De forma natural en pocos días
+                        </div>
+                        <div class="benefit-item">
+                            <strong>✨ Reconectar con tu confianza</strong><br>
+                            Sentirte orgullosa de ser madre
+                        </div>
+                        <div class="benefit-item">
+                            <strong>✨ Disfrutar la lactancia</strong><br>
+                            Sin culpas ni dudas
+                        </div>
+                        <div class="benefit-item">
+                            <strong>✨ Mantener tu lactancia</strong><br>
+                            Aunque trabajes fuera de casa
+                        </div>
                     </div>
                 </div>
+                <div class="ebook-mockup">
+                    <img src="mockup-ebook-lactancia.png" alt="Mockup del ebook Lactancia Poderosa">
+                </div>
             </div>
-            <div class="ebook-mockup">
-                <img src="mockup-ebook-lactancia.png" alt="Mockup del ebook Lactancia Poderosa" loading="lazy">
-            </div>
-        </div>
-
-        <!-- Imagen emocional después de los beneficios -->
-        <div class="emotional-image">
-            <img src="foto-madre-bebe-feliz.jpg" alt="Madre alimentando felizmente a su bebé" loading="lazy">
-        </div>
-
-        <!-- Benefits Section con CTA -->
-        <div class="benefits-section">
-            <a href="https://pay.hotmart.com/K99629333P?checkoutMode=10" class="cta-button">
+            <a href="https://pay.hotmart.com/K99629333P" class="cta-button">
                 Sí, quiero transformar mi lactancia
             </a>
         </div>
 
-        <!-- Bonuses Section - Layout Horizontal -->
+        <!-- Emotional Image -->
+        <div class="emotional-image">
+            <img src="foto-madre-bebe-feliz.jpg" alt="Madre feliz amamantando a su bebé">
+        </div>
+
+        <!-- Bonuses Section -->
         <div class="bonuses-section">
             <h2 style="font-family: 'Anton', sans-serif; font-size: 2.5em; margin-bottom: 30px;">
                 🎁 Además, HOY recibes 3 BONOS exclusivos totalmente GRATIS
             </h2>
-            <div class="bonus-grid">
-                <div class="bonus-card">
-                    <div class="bonus-image">
-                        <img src="bonus1-meditacion.png" alt="Bono 1 - Meditación Guiada" loading="lazy">
-                    </div>
-                    <div>
-                        <div class="bonus-title">BONO #1</div>
-                        <h3 style="margin: 15px 0;">Meditación Guiada en PDF</h3>
-                        <p>Para aumentar tu oxitocina y facilitar el flujo de leche.</p>
-                        <div class="bonus-value">VALOR: $12 - ¡HOY GRATIS!</div>
-                    </div>
+            
+            <div class="bonus-item">
+                <div class="bonus-image">
+                    <img src="bonus1-meditacion.png" alt="Bono 1: Meditación Guiada">
                 </div>
-                <div class="bonus-card">
-                    <div class="bonus-image">
-                        <img src="bonus2-mapa-accion.png" alt="Bono 2 - Mapa de Acción" loading="lazy">
-                    </div>
-                    <div>
-                        <div class="bonus-title">BONO #2</div>
-                        <h3 style="margin: 15px 0;">Mapa de Acción Rápida</h3>
-                        <p>Identifica en segundos qué está afectando tu producción y cómo solucionarlo.</p>
-                        <div class="bonus-value">VALOR: $8 - ¡HOY GRATIS!</div>
-                    </div>
+                <div class="bonus-content">
+                    <div class="bonus-title">BONO #1</div>
+                    <h3 style="margin: 15px 0;">Meditación Guiada en PDF</h3>
+                    <p>Para aumentar tu oxitocina y facilitar el flujo de leche.</p>
+                    <div class="bonus-value">VALOR: $12 - ¡HOY GRATIS!</div>
                 </div>
-                <div class="bonus-card">
-                    <div class="bonus-image">
-                        <img src="bonus3-guia-trabajo.png" alt="Bono 3 - Guía Lactancia y Trabajo" loading="lazy">
-                    </div>
-                    <div>
-                        <div class="bonus-title">BONO #3</div>
-                        <h3 style="margin: 15px 0;">Guía Lactancia & Trabajo</h3>
-                        <p>Estrategias prácticas para mantener tu producción incluso después de volver a la oficina.</p>
-                        <div class="bonus-value">VALOR: $15 - ¡HOY GRATIS!</div>
-                    </div>
+            </div>
+
+            <div class="bonus-item">
+                <div class="bonus-image">
+                    <img src="bonus2-mapa-accion.png" alt="Bono 2: Mapa de Acción Rápida">
+                </div>
+                <div class="bonus-content">
+                    <div class="bonus-title">BONO #2</div>
+                    <h3 style="margin: 15px 0;">Mapa de Acción Rápida</h3>
+                    <p>Identifica en segundos qué está afectando tu producción y cómo solucionarlo.</p>
+                    <div class="bonus-value">VALOR: $8 - ¡HOY GRATIS!</div>
+                </div>
+            </div>
+
+            <div class="bonus-item">
+                <div class="bonus-image">
+                    <img src="bonus3-guia-trabajo.png" alt="Bono 3: Guía Lactancia & Trabajo">
+                </div>
+                <div class="bonus-content">
+                    <div class="bonus-title">BONO #3</div>
+                    <h3 style="margin: 15px 0;">Guía Lactancia & Trabajo</h3>
+                    <p>Estrategias prácticas para mantener tu producción incluso después de volver a la oficina.</p>
+                    <div class="bonus-value">VALOR: $15 - ¡HOY GRATIS!</div>
                 </div>
             </div>
         </div>
@@ -638,8 +580,13 @@
         <!-- Testimonials -->
         <div class="testimonials-section">
             <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">
-                💬 Mamás que han pasado de la frustración a la abundante producción de leche
+            Estas son mamás que han pasado de la frustración a la abundante producción de leche
             </h2>
+            
+            <div class="testimonials-image">
+                <img src="testimonios.png" alt="Testimonios de madres satisfechas">
+            </div>
+            
             <div class="testimonial">
                 <div class="testimonial-text">
                     "Pensaba que tendría que dejar la lactancia al volver al trabajo, pero gracias a Lactancia Poderosa aprendí a organizarme y hoy sigo alimentando a mi bebé exclusivamente con mi leche. ¡Me devolvió la confianza!"
@@ -654,29 +601,25 @@
             </div>
         </div>
 
-        <!-- Pricing Section con Bundle -->
+        <!-- Pricing Section -->
         <div class="pricing-section">
             <h2 style="font-family: 'Anton', sans-serif; font-size: 2em; color: #4c0669; margin-bottom: 20px;">
                 Un resumen de todo lo que vas a recibir hoy
             </h2>
             
-            <div class="bundle-container">
-                <div class="bundle-image">
-                    <img src="bundle-lactanciapoderosa.png" alt="Bundle completo Lactancia Poderosa" loading="lazy">
-                </div>
-                <div class="bundle-details">
-                    <div style="font-size: 1.1em;">
-                        <div>📚 Acceso completo a "Lactancia Poderosa" ($27)</div>
-                        <div>🎁 BONO #1: Meditación Guiada ($12)</div>
-                        <div>🎁 BONO #2: Mapa de Acción Rápida ($8)</div>
-                        <div>🎁 BONO #3: Guía Lactancia & Trabajo ($15)</div>
-                        <div>🔒 Garantía de 7 días</div>
-                        <div>⚡ Acceso inmediato</div>
-                        <div>📱 Soporte incluido</div>
-                        <hr style="margin: 20px 0; border: 1px solid #ddd;">
-                        <div style="font-weight: 700; font-size: 1.2em;">Valor total: <span style="text-decoration: line-through; color: #999;">$62 USD</span></div>
-                    </div>
-                </div>
+            <div class="bundle-image">
+                <img src="bundle-lactanciapoderosa.png" alt="Bundle completo Lactancia Poderosa">
+            </div>
+            
+            <div style="text-align: left; max-width: 500px; margin: 30px auto; font-size: 1.1em;">
+                <div>📚 Acceso completo a "Lactancia Poderosa" ($27)</div>
+                <div>🎁 BONO #1: Meditación Guiada ($12)</div>
+                <div>🎁 BONO #2: Mapa de Acción Rápida ($8)</div>
+                <div>🎁 BONO #3: Guía Lactancia & Trabajo ($15)</div>
+                <div>🔒 Garantía de 7 días</div>
+                <div>⚡ Acceso inmediato</div>
+                <hr style="margin: 20px 0; border: 1px solid #ddd;">
+                <div style="font-weight: 700; font-size: 1.2em;">Valor total: <span style="text-decoration: line-through; color: #999;">$62 USD</span></div>
             </div>
 
             <div class="urgency-banner">
@@ -691,7 +634,7 @@
                 </div>
             </div>
 
-            <a href="https://pay.hotmart.com/K99629333P?checkoutMode=10" class="cta-button" style="font-size: 1.3em; padding: 20px 50px;">
+            <a href="https://pay.hotmart.com/K99629333P" class="cta-button" style="font-size: 1.3em; padding: 20px 50px;">
                 Quiero aumentar mi producción de leche ahora
             </a>
             <div class="price-details" style="margin-top: 15px;">
@@ -699,16 +642,13 @@
             </div>
         </div>
 
-        <!-- Guarantee Section con símbolo -->
+        <!-- Guarantee Section -->
         <div class="guarantee-section">
-            <div class="guarantee-badge">
-                <img src="garantia-hotmart-7dias.png" alt="Garantía 7 días 100% segura" loading="lazy">
-            </div>
             <div class="guarantee-content">
                 <h3 style="font-family: 'Anton', sans-serif; font-size: 2em; color: #4ecdc4; margin-bottom: 20px;">
                     🔒 Garantía de 7 Días - 100% Segura
                 </h3>
-                <p style="font-size: 1.1em; line-height: 1.8;">
+                <p style="font-size: 1.1em; line-height: 1.8; text-align: left;">
                     Confío tanto en el poder transformador de <strong>Lactancia Poderosa</strong> que quiero ofrecerte una garantía de máxima protección por 7 días.<br><br>
                     
                     <strong>Si después de seguir los pasos no notas una mejora en tu producción de leche, me niego a quedarme con tu dinero.</strong><br><br>
@@ -716,11 +656,14 @@
                     Mi misión es apoyar a madres como tú a alimentar a sus bebés de manera plena y satisfactoria. Es tan sencillo como enviarme un correo en los próximos 7 días y recibirás el 100% de tu dinero de vuelta.
                 </p>
             </div>
+            <div class="guarantee-image">
+                <img src="garantia-hotmart-7dias.png" alt="Garantía 7 días Hotmart">
+            </div>
         </div>
 
         <!-- FAQ Section -->
         <div class="faq-section">
-            <h2 class="section-title">❓ Preguntas Frecuentes</h2>
+            <h2 class="section-title"> Preguntas Frecuentes</h2>
             
             <div class="faq-item">
                 <div class="faq-question">¿Esto realmente funciona para todas las mamás?</div>
@@ -759,4 +702,14 @@
                 <strong class="highlight">Eso es exactamente lo que vas a lograr.</strong>
             </p>
             
-            <a href="https://pay.hotmart.com/K99629333P?checkoutMode=10" class
+            <a href="https://pay.hotmart.com/K99629333P" class="cta-button" style="font-size: 1.3em; padding: 20px 50px; margin: 20px 0;">
+                Quiero aumentar mi producción de leche ahora
+            </a>
+            
+            <div class="price-details">
+                Solo $9 USD • Garantía 7 días • Acceso inmediato
+            </div>
+        </div>
+    </div>
+</body>
+</html>
